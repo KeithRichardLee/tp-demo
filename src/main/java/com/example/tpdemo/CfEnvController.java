@@ -17,7 +17,7 @@ public class CfEnvController {
         this.cfEnvService = cfEnvService;
     }
 
-    @GetMapping("/cfenv")
+    @GetMapping({"/cfenv", "/cfenv/"})
     public ResponseEntity<CfEnvInfo> getCfEnvInfo() {
         log.info("Received request on /cfenv endpoint");
         CfEnvInfo info = cfEnvService.getCfEnvInfo();

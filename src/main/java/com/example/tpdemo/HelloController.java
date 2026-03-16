@@ -10,7 +10,7 @@ public class HelloController {
 
     private static final Logger logger = LogManager.getLogger(HelloController.class);
 
-    @GetMapping("/hello")
+    @GetMapping({"/hello", "/hello/"})
     public String hello() {
         logger.info("Received request on /hello endpoint");
         return "Hello from tp-demo!";
